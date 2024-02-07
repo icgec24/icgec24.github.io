@@ -8,7 +8,7 @@ class NavigationBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> nav_title = ['News','Galleries','Organizing Committee','Keynote Speech','Call for Paper','Important Dates','Invited Sessions','Paper Submission',
-    'Accepted Paper','Final Manuscript','Conference Registration','Conference Program','Conference Venue','Recommended Accommodation'];
+    'Accepted Paper','Final Manuscript','Conference Registration','Conference Program','Conference Venue','Recommended Accommodation','Miyazaki Prefecture'];
     final scrollController = ScrollController();
     return Container(
       color: Colors.blueGrey,
@@ -45,7 +45,7 @@ class _NavBarItem extends StatelessWidget {
   final String title;
   final TextStyle textStyle;
   final Function(String) onTap;
-  const _NavBarItem({required this.title,required this.textStyle,required this.onTap,super.key});
+  const _NavBarItem({required this.title,required this.textStyle,required this.onTap});
 
   @override
   Widget build(BuildContext context) {
