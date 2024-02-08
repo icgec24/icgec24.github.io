@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icgec_conference/features/conference_news/news_desktop.dart';
@@ -44,13 +45,13 @@ class _HomeDesktopState extends State<HomeDesktop> {
               child: Expanded(
                   child: Stack(
                 children: [
-                 // Container(
-                 //        decoration:  BoxDecoration(
-                 //            image: DecorationImage(
-                 //                fit: BoxFit.fill,
-                 //                image: AssetImage(
-                 //                    'assets/images/${previousImage.value}')),
-                 //      )),
+                 Container(
+                        decoration:  BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: AssetImage(
+                                    'assets/images/${previousImage.value}')),
+                      )),
                  CarouselSlider.builder(
                       itemCount: carouselImageList.length,
                       itemBuilder: (context, itemIndex, pageViewIndex) {
@@ -74,7 +75,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         autoPlayAnimationDuration:
                             const Duration(milliseconds: 1000),
                         autoPlayCurve: Curves.easeInOutCirc,
-                        //enlargeCenterPage: true,
+                        enlargeCenterPage: true,
                         enlargeFactor: 1,
                         onPageChanged: (itemIndex,_){
                           // int pageChangeIndex = 0;
@@ -141,7 +142,36 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  Positioned(
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        color: Colors.white70,
+                        //padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                           Row(
+                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                             children: [
+                             Container(child: Image.asset("assets/images/UOM.png",),width:300 ,),
+                             Image.asset("assets/images/NKUST.png",width: 150,height: 150,),
+                             Image.asset("assets/images/Shandong_University_of_Science_and_Technology_logo.png",width: 140),
+                             SvgPicture.asset(
+                                 "assets/images/Osaka Metropolitan University.svg",
+                                 semanticsLabel: 'Acme Logo',width: 400,
+                             ),
+                             Image.asset("assets/images/springer-logo-transparent.png",width: 250,)
+                           ],)
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+
                 ],
               )),
             )),
