@@ -98683,8 +98683,8 @@ A.Vj.prototype={
 V(a){var s=null
 return A.j6(A.bV(s,A.ch("Coming Soon...",s,s,s,A.aRO().$1$fontSize(50),s,s),B.k,s,s,s,s,s,s,s,s),s,s)}}
 A.FM.prototype={
-ao(){var s="r_kodomonokuni_2022_03.jpg"
-return new A.Mt(A.aWZ("ICGEC-2024"),A.aWZ(s),A.b(["udojingu_03.jpg","aoshima1.jpg","matsurihanabi.jpg","miyazaki19.jpg","miyazaki_202009.jpg","miyazaki_kentyou_01.jpg","nichinan_202029.jpg",s],t.s),B.i)}}
+ao(){var s="nichinan_202029.jpg"
+return new A.Mt(A.aWZ("ICGEC-2024"),A.aWZ(s),A.b(["udojingu_03.jpg","aoshima1.jpg","matsurihanabi.jpg","miyazaki19.jpg","miyazaki_202009.jpg","miyazaki_kentyou_01.jpg",s],t.s),B.i)}}
 A.Mt.prototype={
 V(a){var s=this,r=null
 return A.iM(A.b([A.em(new A.Vg(s.gaKK(),r),r,300),new A.qM(new A.aEH(s,a),r),new A.qM(new A.aEI(s),r),new A.qM(new A.aEJ(s),r),new A.qM(new A.aEK(s),r)],t.p),r,B.bc,B.aq)},
@@ -98701,7 +98701,7 @@ o=A.kA(j,new A.h4(B.Z,j,j,A.bV(j,A.ja(A.b([A.ch(k,j,j,j,A.aRO().$3$color$fontSiz
 n=A.bV(j,A.akM("assets/images/UOM.png",j,j),B.k,j,j,j,j,j,j,j,300)
 m=A.akM("assets/images/NKUST.png",150,150)
 l=A.akM("assets/images/Shandong_University_of_Science_and_Technology_logo.png",j,140)
-return A.kQ(A.Fh(A.hK(B.b6,A.b([s,new A.DZ(new A.ae4(r.a.b,1,0,!0,!1,!0,B.NX,B.ej,B.MX,!0,B.aR,new A.aEF(),1),new A.aEG(i),new A.ae3(new A.bB(new A.aH(q,t.wC),t.Fe)),8,j),o,A.kA(j,new A.h4(B.kK,j,j,A.bV(j,A.ja(A.b([A.iM(A.b([n,m,l,new A.a_2(400,new A.JX("assets/images/Osaka Metropolitan University.svg",j,j,j,j),"Acme Logo",j,j),A.akM("assets/images/springer-logo-transparent.png",j,250)],p),j,B.mH,B.aq)],p),B.ef,j,B.mH,B.dc),B.k,B.Q,j,j,j,j,j,j,j),j),j,j,j,j,j,j)],p),B.O,B.aZ,j)),h)},
+return A.kQ(A.Fh(A.hK(B.b6,A.b([s,new A.DZ(new A.ae4(r.a.b,1,0,!0,!1,!0,B.NX,B.ej,B.MX,!0,B.aR,new A.aEF(),1),new A.aEG(i),new A.ae3(new A.bB(new A.aH(q,t.wC),t.Fe)),7,j),o,A.kA(j,new A.h4(B.kK,j,j,A.bV(j,A.ja(A.b([A.iM(A.b([n,m,l,new A.a_2(400,new A.JX("assets/images/Osaka Metropolitan University.svg",j,j,j,j),"Acme Logo",j,j),A.akM("assets/images/springer-logo-transparent.png",j,250)],p),j,B.mH,B.aq)],p),B.ef,j,B.mH,B.dc),B.k,B.Q,j,j,j,j,j,j,j),j),j,j,j,j,j,j)],p),B.O,B.aZ,j)),h)},
 $S:95}
 A.aEG.prototype={
 $3(a,b,c){var s=null
