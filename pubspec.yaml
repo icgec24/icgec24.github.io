@@ -42,6 +42,8 @@ dependencies:
   get:
   webview_flutter_web: ^0.2.2+4
   flutter_svg: ^2.0.9
+  universal_html: ^2.2.4
+  image_fade: ^0.6.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
