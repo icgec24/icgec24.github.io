@@ -1,13 +1,11 @@
 import 'dart:async';
 
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icgec_conference/features/conference_news/news_desktop.dart';
-import 'package:image_fade/image_fade.dart';
 
 import '../../widgets/navigation_bar/navigation_bar.dart';
 import '../pdf_view/pdf_view_desktop.dart';
@@ -24,6 +22,7 @@ class HomeDesktop extends StatefulWidget {
 class _HomeDesktopState extends State<HomeDesktop> {
   var page = "ICGEC-2024".obs;
   var previousImage = 0.obs;
+  var nextImage = 0.obs;
   var visible = true.obs;
   var carouselImageList = [
     "udojingu_03.jpg",
@@ -38,16 +37,21 @@ class _HomeDesktopState extends State<HomeDesktop> {
   @override
   void initState() {
     super.initState();
-    Timer.periodic(const Duration(seconds: 5), (timer) {
+    Timer.periodic(const Duration(seconds: 6), (timer) {
       visible.value = !visible.value;
-      Future.delayed(Duration(milliseconds:5000),(){
-        if (previousImage.value < carouselImageList.length - 1) {
-          previousImage.value = previousImage.value + 1;
+      if (!visible.value){
+      Future.delayed(Duration(milliseconds:3000),(){
+        if (nextImage.value < carouselImageList.length - 3) {
+          nextImage.value = nextImage.value + 1;
         } else {
-          previousImage.value = 0;
+          nextImage.value = 0;
         }
-      });
-      print("count");
+      });}
+      else{
+        Future.delayed(Duration(milliseconds:3000),(){
+          previousImage.value = nextImage.value + 2;
+        });
+      }
     });
   }
 
@@ -71,10 +75,10 @@ class _HomeDesktopState extends State<HomeDesktop> {
                   //   image: DecorationImage(
                   //       fit: BoxFit.fill,
                   //       image:
-                  //           AssetImage('assets/images/${previousImage.value}')),
+                  //           AssetImage('assets/images/${nextImage.value}')),
                   // )),
                   // ImageFade(
-                  //   image: AssetImage('assets/images/${carouselImageList[previousImage.value]}'),
+                  //   image: AssetImage('assets/images/${carouselImageList[nextImage.value]}'),
                   //   // slow-ish fade for loaded images:
                   //   duration: const Duration(milliseconds: 7000),
                   //
@@ -84,45 +88,27 @@ class _HomeDesktopState extends State<HomeDesktop> {
                   //  curve: Curves.easeInToLinear,
                   //  width: MediaQuery.of(context).size.width,
                   // ),
-                  // Container(
-                  //   decoration: BoxDecoration(
-                  //       image: DecorationImage(
-                  //           fit: BoxFit.fill,
-                  //           image: AssetImage(
-                  //               'assets/images/${carouselImageList[pageChangeIndex.value]}'))),
-                  // ),
-                  AnimatedOpacity(
-                    // If the widget is visible, animate to 0.0 (invisible).
-                    // If the widget is hidden, animate to 1.0 (fully visible).
-                    opacity: visible.value ? 1.0 : 0.0,
-                    duration: const Duration(milliseconds: 5000),
-                    // The green box must be a child of the AnimatedOpacity widget.
-                    child: Container(
-                      color: Colors.green,
-                      // decoration: BoxDecoration(
-                      //     image: DecorationImage(
-                      //         fit: BoxFit.fill,
-                      //         image: AssetImage(
-                      //             'assets/images/${carouselImageList[previousImage.value]}'))),
-                    ),
+                  Container(
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: AssetImage(
+                                'assets/images/${carouselImageList[previousImage.value]}'))),
                   ),
                   AnimatedOpacity(
-                    // If the widget is visible, animate to 0.0 (invisible).
-                    // If the widget is hidden, animate to 1.0 (fully visible).
-                    opacity: visible.value ? 0.0 : 1.0,
-                    duration: const Duration(milliseconds: 5000),
+                    opacity: visible.value ? 1.0 : 0.0,
+                    duration: const Duration(milliseconds: 3000),
                     // The green box must be a child of the AnimatedOpacity widget.
                     child: Container(
-                      color: Colors.green,
-                      // decoration: BoxDecoration(
-                      //     image: DecorationImage(
-                      //         fit: BoxFit.fill,
-                      //         image: AssetImage(
-                      //             'assets/images/${carouselImageList[previousImage.value]}'))),
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              fit: BoxFit.fill,
+                              image: AssetImage(
+                                  'assets/images/${carouselImageList[nextImage.value]}'))),
                     ),
                   ),
 
-                  // FadeInImage(placeholder: AssetImage('assets/images/${carouselImageList[previousImage.value]}'), image: AssetImage('assets/images/${carouselImageList[previousImage.value]}'),
+                  // FadeInImage(placeholder: AssetImage('assets/images/${carouselImageList[nextImage.value]}'), image: AssetImage('assets/images/${carouselImageList[nextImage.value]}'),
                   //   fit: BoxFit.fill,width: MediaQuery.of(context).size.width,
                   //   fadeInDuration: const Duration(milliseconds: 5000),
                   //   fadeOutDuration: const Duration(milliseconds: 5000),
@@ -162,7 +148,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                           //   pageChangeIndex = itemIndex-1;
                           // }
                           // Future.delayed(const Duration(seconds: 1),(){
-                          //   previousImage.value = carouselImageList[pageChangeIndex];
+                          //   nextImage.value = carouselImageList[pageChangeIndex];
                           // });
 
                         },
