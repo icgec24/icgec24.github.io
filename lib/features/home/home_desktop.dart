@@ -2,12 +2,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icgec_conference/features/conference_news/news_desktop.dart';
+import 'package:icgec_conference/features/importance_date/importance_date_desktop.dart';
+import 'package:icgec_conference/features/recommended_accommodation/recommended_accommodation_desktop.dart';
 
 import '../../widgets/navigation_bar/navigation_bar.dart';
+import '../galleries/galleries_desktop.dart';
 import '../pdf_view/pdf_view_desktop.dart';
 import '../web_view/custom_web_address.dart';
 import 'package:universal_html/html.dart' as html;
@@ -39,16 +41,16 @@ class _HomeDesktopState extends State<HomeDesktop> {
     super.initState();
     Timer.periodic(const Duration(seconds: 6), (timer) {
       visible.value = !visible.value;
-      if (!visible.value){
-      Future.delayed(Duration(milliseconds:3000),(){
-        if (nextImage.value < carouselImageList.length - 3) {
-          nextImage.value = nextImage.value + 1;
-        } else {
-          nextImage.value = 0;
-        }
-      });}
-      else{
-        Future.delayed(Duration(milliseconds:3000),(){
+      if (!visible.value) {
+        Future.delayed(const Duration(milliseconds: 3000), () {
+          if (nextImage.value < carouselImageList.length - 3) {
+            nextImage.value = nextImage.value + 1;
+          } else {
+            nextImage.value = 0;
+          }
+        });
+      } else {
+        Future.delayed(const Duration(milliseconds: 3000), () {
           previousImage.value = nextImage.value + 2;
         });
       }
@@ -218,25 +220,29 @@ class _HomeDesktopState extends State<HomeDesktop> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Container(
+                                SizedBox(
+                                  width: 300,
                                   child: Image.asset(
                                     "assets/images/UOM.png",
                                   ),
-                                  width: 300,
                                 ),
+                                // const CircleAvatar(
+                                //   radius: 65,
+                                //   foregroundImage: AssetImage(
+                                //     "assets/images/miyazaki_prefecture.jpeg",),
+                                // ),
                                 Image.asset(
                                   "assets/images/NKUST.png",
                                   width: 150,
                                   height: 150,
                                 ),
                                 Image.asset(
+                                  "assets/images/miyazaki_prefecture_logo.jpeg",
+                                  width: 320,
+                                ),
+                                Image.asset(
                                     "assets/images/Shandong_University_of_Science_and_Technology_logo.png",
                                     width: 140),
-                                SvgPicture.asset(
-                                  "assets/images/Osaka Metropolitan University.svg",
-                                  semanticsLabel: 'Acme Logo',
-                                  width: 400,
-                                ),
                                 Image.asset(
                                   "assets/images/springer-logo-transparent.png",
                                   width: 250,
@@ -255,16 +261,50 @@ class _HomeDesktopState extends State<HomeDesktop> {
             visible: page.value == "Call for Paper",
             child: const Expanded(child: PdfViewDesktop()))),
         Obx(() => Visibility(
+            visible: page.value == "Important Dates",
+            child: const Expanded(child: ImportanceDateDesktop()))),
+        Obx(() => Visibility(
             visible: page.value == "Miyazaki Prefecture",
             child: const Expanded(
                 child: WebViewExample(
               web_url: 'https://www.kanko-miyazaki.jp/',
             )))),
         Obx(() => Visibility(
-            visible: page.value != "ICGEC-2024" &&
-                page.value != "Call for Paper" &&
-                page.value != "Miyazaki Prefecture",
-            child: const Expanded(child: NewsDesktop())))
+            visible: page.value == "News",
+            child: const Expanded(child: NewsDesktop()))),
+        Obx(() => Visibility(
+            visible: page.value == "Galleries",
+            child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() => Visibility(
+            visible: page.value == "Organizing Committee",
+            child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() => Visibility(
+            visible: page.value == "Keynote Speech",
+            child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() => Visibility(
+            visible: page.value == "Invited Sessions",
+            child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() => Visibility(
+            visible: page.value == "Paper Submission",
+            child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() => Visibility(
+            visible: page.value == "Accepted Paper",
+            child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() => Visibility(
+            visible: page.value == "Final Manuscript",
+            child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() => Visibility(
+            visible: page.value == "Conference Registration",
+            child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() => Visibility(
+            visible: page.value == "Conference Program",
+            child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() => Visibility(
+            visible: page.value == "Conference Venue",
+            child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() => Visibility(
+            visible: page.value == "Recommended Accommodation",
+            child: const Expanded(child: RecommendedAccommodationDesktop()))),
       ],
     );
   }
