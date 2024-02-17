@@ -74,24 +74,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
               child: Expanded(
                   child: Stack(
                     children: [
-                      // Container(
-                      //     decoration: BoxDecoration(
-                      //   image: DecorationImage(
-                      //       fit: BoxFit.fill,
-                      //       image:
-                      //           AssetImage('assets/images/${nextImage.value}')),
-                      // )),
-                      // ImageFade(
-                      //   image: AssetImage('assets/images/${carouselImageList[nextImage.value]}'),
-                      //   // slow-ish fade for loaded images:
-                      //   duration: const Duration(milliseconds: 7000),
-                      //
-                      //   // if the image is loaded synchronously (ex. from memory), fade in faster:
-                      //   syncDuration: const Duration(milliseconds: 3000),
-                      //   fit: BoxFit.fitWidth,
-                      //  curve: Curves.easeInToLinear,
-                      //  width: MediaQuery.of(context).size.width,
-                      // ),
                       Container(
                         decoration: BoxDecoration(
                             image: DecorationImage(
@@ -113,53 +95,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                           .value]}'))),
                         ),
                       ),
-
-                      // FadeInImage(placeholder: AssetImage('assets/images/${carouselImageList[nextImage.value]}'), image: AssetImage('assets/images/${carouselImageList[nextImage.value]}'),
-                      //   fit: BoxFit.fill,width: MediaQuery.of(context).size.width,
-                      //   fadeInDuration: const Duration(milliseconds: 5000),
-                      //   fadeOutDuration: const Duration(milliseconds: 5000),
-                      // ),
-                      /*CarouselSlider.builder(
-                      itemCount: carouselImageList.length,
-                      itemBuilder: (context, itemIndex, pageViewIndex) {
-                        return Container(
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: AssetImage(
-                                      'assets/images/${carouselImageList[itemIndex]}'))),
-                        );
-                      },
-                      options: CarouselOptions(
-                        height: MediaQuery.of(context).size.height,
-                        // aspectRatio: 16/9,
-                        viewportFraction: 1,
-                        initialPage: 0,
-                        enableInfiniteScroll: true,
-                        reverse: false,
-                        autoPlay: true,
-                        autoPlayInterval: const Duration(seconds: 5),
-                        autoPlayAnimationDuration:
-                            const Duration(milliseconds: 1000),
-                        autoPlayCurve: Curves.easeInOutCirc,
-                        enlargeCenterPage: true,
-                        enlargeFactor: 1,
-                        onPageChanged: (itemIndex,_){
-                          // int pageChangeIndex = 0;
-                          // if(itemIndex == 0)
-                          //    {pageChangeIndex = carouselImageList.length-1;}
-                          // else if(itemIndex == carouselImageList.length-1){
-                          //   pageChangeIndex=0;
-                          // }else{
-                          //   pageChangeIndex = itemIndex-1;
-                          // }
-                          // Future.delayed(const Duration(seconds: 1),(){
-                          //   nextImage.value = carouselImageList[pageChangeIndex];
-                          // });
-
-                        },
-                        scrollDirection: Axis.horizontal,
-                      )),*/
                       Positioned(
                         child: Align(
                           alignment: Alignment.center,
@@ -225,10 +160,19 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   mainAxisAlignment: MainAxisAlignment
                                       .spaceEvenly,
                                   children: [
-                                    SizedBox(
-                                      width: 300,
-                                      child: Image.asset(
-                                        "assets/images/UOM.png",
+                                    Expanded(
+                                      flex: 1,
+                                      child: SizedBox(
+                                        height: 100,
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 3,
+                                      child: SizedBox(
+                                        height: 100,
+                                        child: Image.asset(
+                                            "assets/images/UOM.png",
+                                            width: 60),
                                       ),
                                     ),
                                     // const CircleAvatar(
@@ -236,22 +180,55 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                     //   foregroundImage: AssetImage(
                                     //     "assets/images/miyazaki_prefecture.jpeg",),
                                     // ),
-                                    Image.asset(
-                                      "assets/images/NKUST.png",
-                                      width: 150,
-                                      height: 150,
+                                    Expanded(
+                                      flex: 2,
+                                      child: SizedBox(
+                                        height: 100,
+                                        child: Image.asset(
+                                            "assets/images/NKUST.png",
+                                            width: 60),
+                                      ),
                                     ),
-                                    Image.asset(
-                                      "assets/images/miyazaki_prefecture_logo.jpeg",
-                                      width: 320,
+                                    Expanded(
+                                      flex: 2,
+                                      child: SizedBox(
+                                        height: 100,
+                                        child: Image.asset(
+                                            "assets/images/Shandong_University_of_Science_and_Technology_logo.png",
+                                            width: 60),
+                                      ),
                                     ),
-                                    Image.asset(
-                                        "assets/images/Shandong_University_of_Science_and_Technology_logo.png",
-                                        width: 140),
-                                    Image.asset(
-                                      "assets/images/springer-logo-transparent.png",
-                                      width: 250,
-                                    )
+                                    Expanded(
+                                      flex: 2,
+                                      child: SizedBox(
+                                        height: 120,
+                                        child: Image.asset(
+                                            "assets/images/PSU_Official_Color.png",
+                                            width: 60),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 2,
+                                      child: SizedBox(
+                                        height: 100,
+                                        child: Image.asset(
+                                            "assets/images/Vellore_Institute_of_Technology_seal_2017.png",
+                                            width: 60),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 3,
+                                      child: Image.asset(
+                                        "assets/images/springer-logo-transparent.png",
+                                        width: 250,
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 1,
+                                      child: SizedBox(
+                                        height: 100,
+                                      ),
+                                    ),
                                   ],
                                 )
                               ],
