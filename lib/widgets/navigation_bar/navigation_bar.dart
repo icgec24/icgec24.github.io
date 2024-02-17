@@ -8,7 +8,7 @@ class NavigationBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> nav_title = ['News','Galleries','Organizing Committee','Keynote Speech','Call for Paper','Important Dates','Invited Sessions','Paper Submission',
-    'Accepted Paper','Final Manuscript','Conference Registration','Conference Program','Conference Venue','Recommended Accommodation','Miyazaki Prefecture'];
+    'Accepted Paper','Final Manuscript','Conference Registration','Conference Program','Conference Venue','Recommended Accommodation','Access to Miyazaki','Miyazaki Information'];
     final scrollController = ScrollController();
     return Container(
       color: Colors.blueGrey,

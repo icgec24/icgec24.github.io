@@ -6,6 +6,6 @@ class GalleriesDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Container(child: Text('Coming Soon...',style: GoogleFonts.notoSans(fontSize: 50),),));
+    return Center(child: Text('Coming Soon...',style: GoogleFonts.notoSans(fontSize: 50),));
   }
 }

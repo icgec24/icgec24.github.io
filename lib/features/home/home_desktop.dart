@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:icgec_conference/features/conference_news/news_desktop.dart';
 import 'package:icgec_conference/features/importance_date/importance_date_desktop.dart';
 import 'package:icgec_conference/features/recommended_accommodation/recommended_accommodation_desktop.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/navigation_bar/navigation_bar.dart';
 import '../galleries/galleries_desktop.dart';
@@ -67,55 +68,58 @@ class _HomeDesktopState extends State<HomeDesktop> {
             onTap: changePage,
           ),
         ),
-        Obx(() => Visibility(
+        Obx(() =>
+            Visibility(
               visible: page.value == "ICGEC-2024",
               child: Expanded(
                   child: Stack(
-                children: [
-                  // Container(
-                  //     decoration: BoxDecoration(
-                  //   image: DecorationImage(
-                  //       fit: BoxFit.fill,
-                  //       image:
-                  //           AssetImage('assets/images/${nextImage.value}')),
-                  // )),
-                  // ImageFade(
-                  //   image: AssetImage('assets/images/${carouselImageList[nextImage.value]}'),
-                  //   // slow-ish fade for loaded images:
-                  //   duration: const Duration(milliseconds: 7000),
-                  //
-                  //   // if the image is loaded synchronously (ex. from memory), fade in faster:
-                  //   syncDuration: const Duration(milliseconds: 3000),
-                  //   fit: BoxFit.fitWidth,
-                  //  curve: Curves.easeInToLinear,
-                  //  width: MediaQuery.of(context).size.width,
-                  // ),
-                  Container(
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.fill,
-                            image: AssetImage(
-                                'assets/images/${carouselImageList[previousImage.value]}'))),
-                  ),
-                  AnimatedOpacity(
-                    opacity: visible.value ? 1.0 : 0.0,
-                    duration: const Duration(milliseconds: 3000),
-                    // The green box must be a child of the AnimatedOpacity widget.
-                    child: Container(
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.fill,
-                              image: AssetImage(
-                                  'assets/images/${carouselImageList[nextImage.value]}'))),
-                    ),
-                  ),
+                    children: [
+                      // Container(
+                      //     decoration: BoxDecoration(
+                      //   image: DecorationImage(
+                      //       fit: BoxFit.fill,
+                      //       image:
+                      //           AssetImage('assets/images/${nextImage.value}')),
+                      // )),
+                      // ImageFade(
+                      //   image: AssetImage('assets/images/${carouselImageList[nextImage.value]}'),
+                      //   // slow-ish fade for loaded images:
+                      //   duration: const Duration(milliseconds: 7000),
+                      //
+                      //   // if the image is loaded synchronously (ex. from memory), fade in faster:
+                      //   syncDuration: const Duration(milliseconds: 3000),
+                      //   fit: BoxFit.fitWidth,
+                      //  curve: Curves.easeInToLinear,
+                      //  width: MediaQuery.of(context).size.width,
+                      // ),
+                      Container(
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: AssetImage(
+                                    'assets/images/${carouselImageList[previousImage
+                                        .value]}'))),
+                      ),
+                      AnimatedOpacity(
+                        opacity: visible.value ? 1.0 : 0.0,
+                        duration: const Duration(milliseconds: 3000),
+                        // The green box must be a child of the AnimatedOpacity widget.
+                        child: Container(
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: AssetImage(
+                                      'assets/images/${carouselImageList[nextImage
+                                          .value]}'))),
+                        ),
+                      ),
 
-                  // FadeInImage(placeholder: AssetImage('assets/images/${carouselImageList[nextImage.value]}'), image: AssetImage('assets/images/${carouselImageList[nextImage.value]}'),
-                  //   fit: BoxFit.fill,width: MediaQuery.of(context).size.width,
-                  //   fadeInDuration: const Duration(milliseconds: 5000),
-                  //   fadeOutDuration: const Duration(milliseconds: 5000),
-                  // ),
-                  /*CarouselSlider.builder(
+                      // FadeInImage(placeholder: AssetImage('assets/images/${carouselImageList[nextImage.value]}'), image: AssetImage('assets/images/${carouselImageList[nextImage.value]}'),
+                      //   fit: BoxFit.fill,width: MediaQuery.of(context).size.width,
+                      //   fadeInDuration: const Duration(milliseconds: 5000),
+                      //   fadeOutDuration: const Duration(milliseconds: 5000),
+                      // ),
+                      /*CarouselSlider.builder(
                       itemCount: carouselImageList.length,
                       itemBuilder: (context, itemIndex, pageViewIndex) {
                         return Container(
@@ -156,174 +160,207 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         },
                         scrollDirection: Axis.horizontal,
                       )),*/
-                  Positioned(
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Container(
-                        color: Colors.black87,
-                        padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              'ICGEC-2024',
-                              style: GoogleFonts.notoSans(
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
-                            ),
-                            Text('The 16th International Conference On',
-                                style: GoogleFonts.arimo(
-                                    fontSize: 35,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white70)),
-                            Text(
-                              'Genetic and Evolutionary Computing',
-                              style: GoogleFonts.arimo(
-                                  fontSize: 35,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white70),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            RichText(
-                                text: TextSpan(
-                                    text: 'August 28-30, 2024, Miyazaki, Japan',
-                                    /* children: [
+                      Positioned(
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Container(
+                            color: Colors.black87,
+                            padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  'ICGEC-2024',
+                                  style: GoogleFonts.notoSans(
+                                      fontSize: 40,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white),
+                                ),
+                                Text('The 16th International Conference On',
+                                    style: GoogleFonts.arimo(
+                                        fontSize: 35,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white70)),
+                                Text(
+                                  'Genetic and Evolutionary Computing',
+                                  style: GoogleFonts.arimo(
+                                      fontSize: 35,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white70),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                RichText(
+                                    text: TextSpan(
+                                        text: 'August 28-30, 2024, Miyazaki, Japan',
+                                        /* children: [
                                       TextSpan(
                                           text: ' (Hybrid)',
                                           style: GoogleFonts.notoSans(
                                               fontSize: 18,
                                               color: Colors.blueAccent))
                                     ],*/
-                                    style: GoogleFonts.notoSans(
-                                        fontSize: 16, color: Colors.white)))
-                          ],
+                                        style: GoogleFonts.notoSans(
+                                            fontSize: 16, color: Colors.white)))
+                              ],
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                  Positioned(
-                    child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Container(
-                        color: Colors.white70,
-                        //padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Row(
+                      Positioned(
+                        child: Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Container(
+                            color: Colors.white70,
+                            //padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
+                            child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              mainAxisSize: MainAxisSize.min,
                               children: [
-                                SizedBox(
-                                  width: 300,
-                                  child: Image.asset(
-                                    "assets/images/UOM.png",
-                                  ),
-                                ),
-                                // const CircleAvatar(
-                                //   radius: 65,
-                                //   foregroundImage: AssetImage(
-                                //     "assets/images/miyazaki_prefecture.jpeg",),
-                                // ),
-                                Image.asset(
-                                  "assets/images/NKUST.png",
-                                  width: 150,
-                                  height: 150,
-                                ),
-                                Image.asset(
-                                  "assets/images/miyazaki_prefecture_logo.jpeg",
-                                  width: 320,
-                                ),
-                                Image.asset(
-                                    "assets/images/Shandong_University_of_Science_and_Technology_logo.png",
-                                    width: 140),
-                                Image.asset(
-                                  "assets/images/springer-logo-transparent.png",
-                                  width: 250,
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment
+                                      .spaceEvenly,
+                                  children: [
+                                    SizedBox(
+                                      width: 300,
+                                      child: Image.asset(
+                                        "assets/images/UOM.png",
+                                      ),
+                                    ),
+                                    // const CircleAvatar(
+                                    //   radius: 65,
+                                    //   foregroundImage: AssetImage(
+                                    //     "assets/images/miyazaki_prefecture.jpeg",),
+                                    // ),
+                                    Image.asset(
+                                      "assets/images/NKUST.png",
+                                      width: 150,
+                                      height: 150,
+                                    ),
+                                    Image.asset(
+                                      "assets/images/miyazaki_prefecture_logo.jpeg",
+                                      width: 320,
+                                    ),
+                                    Image.asset(
+                                        "assets/images/Shandong_University_of_Science_and_Technology_logo.png",
+                                        width: 140),
+                                    Image.asset(
+                                      "assets/images/springer-logo-transparent.png",
+                                      width: 250,
+                                    )
+                                  ],
                                 )
                               ],
-                            )
-                          ],
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                ],
-              )),
+                    ],
+                  )),
             )),
-        Obx(() => Visibility(
-            visible: page.value == "Call for Paper",
-            child: const Expanded(child: PdfViewDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Important Dates",
-            child: const Expanded(child: ImportanceDateDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Miyazaki Prefecture",
-            child: const Expanded(
-                child: WebViewExample(
-              web_url: 'https://www.kanko-miyazaki.jp/',
-            )))),
-        Obx(() => Visibility(
-            visible: page.value == "News",
-            child: const Expanded(child: NewsDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Galleries",
-            child: const Expanded(child: GalleriesDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Organizing Committee",
-            child: const Expanded(child: GalleriesDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Keynote Speech",
-            child: const Expanded(child: GalleriesDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Invited Sessions",
-            child: const Expanded(child: GalleriesDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Paper Submission",
-            child: const Expanded(child: GalleriesDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Accepted Paper",
-            child: const Expanded(child: GalleriesDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Final Manuscript",
-            child: const Expanded(child: GalleriesDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Conference Registration",
-            child: const Expanded(child: GalleriesDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Conference Program",
-            child: const Expanded(child: GalleriesDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Conference Venue",
-            child: const Expanded(child: GalleriesDesktop()))),
-        Obx(() => Visibility(
-            visible: page.value == "Recommended Accommodation",
-            child: const Expanded(child: RecommendedAccommodationDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Call for Paper",
+                child: const Expanded(child: PdfViewDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Important Dates",
+                child: const Expanded(child: ImportanceDateDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Miyazaki Prefecture",
+                child: const Expanded(
+                    child: WebViewExample(
+                      web_url: 'https://www.omu.ac.jp/en/',
+                    )))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "News",
+                child: const Expanded(child: NewsDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Galleries",
+                child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Organizing Committee",
+                child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Keynote Speech",
+                child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Invited Sessions",
+                child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Paper Submission",
+                child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Accepted Paper",
+                child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Final Manuscript",
+                child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Conference Registration",
+                child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Conference Program",
+                child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Conference Venue",
+                child: const Expanded(child: GalleriesDesktop()))),
+        Obx(() =>
+            Visibility(
+                visible: page.value == "Recommended Accommodation",
+                child: const Expanded(
+                    child: RecommendedAccommodationDesktop()))),
       ],
     );
   }
 
   void changePage(pageName) {
-    if (pageName == "Call for Paper") {
-      showPdf();
-    } else {
-      page.value = pageName;
+    switch (pageName) {
+      case "Call for Paper":
+        showPdf('call_for_paper.pdf');
+        page.value = "ICGEC-2024";
+        break;
+      case "Access to Miyazaki":
+        showPdf('AccessToMiyazaki.pdf');
+        page.value = "ICGEC-2024";
+        break;
+      case "Miyazaki Information":
+        final Uri url = Uri.parse('https://www.kanko-miyazaki.jp/');
+        _launchUrl(url);
+        page.value = "ICGEC-2024";
+        break;
+      default:
+        page.value = pageName;
     }
   }
 
-  Future<void> showPdf() async {
+  Future<void> showPdf(String fileName) async {
     var bytes = await rootBundle
-        .load("assets/pdf/call_for_paper.pdf"); // location of your asset file
+        .load("assets/pdf/$fileName"); // location of your asset file
 
     final blob = html.Blob([bytes], 'application/pdf');
     final url = html.Url.createObjectUrlFromBlob(blob);
     html.window.open(url, "_blank");
     html.Url.revokeObjectUrl(url);
+  }
+
+  Future<void> _launchUrl(url) async {
+    await launchUrl(url);
   }
 }
