@@ -333,7 +333,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
   void changePage(pageName) {
     switch (pageName) {
       case "Call for Paper":
-        showPdf('call_for_paper.pdf');
+        showPdf('CallForPaper.pdf');
         page.value = "ICGEC-2024";
         break;
       case "Access to Miyazaki":
