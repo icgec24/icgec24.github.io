@@ -11,7 +11,7 @@ class NewsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 10,),
+      padding: const EdgeInsets.only(top: 10,),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -21,7 +21,8 @@ class NewsItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
             SizedBox(
-                child: Text(dateString,style: GoogleFonts.notoSans(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.grey)),width: 130,),
+                width: 130,
+                child: Text(dateString,style: GoogleFonts.notoSans(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.grey)),),
               Text(title,style: GoogleFonts.notoSans(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.black))
             ],),
           ),
