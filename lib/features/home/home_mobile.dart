@@ -176,14 +176,12 @@ class _HomeMobileState extends State<HomeMobile> {
                           scrollDirection: Axis.horizontal,
                         )),*/
                         Positioned(
-                          top: 250,
-                          right: 50,
-                          left: 50,
                           child: Align(
-                            alignment: Alignment.topCenter,
+                            alignment: Alignment.center,
                             child: Container(
                               color: Colors.black87,
-                              padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
+                              margin: const EdgeInsets.only(left: 30,right: 30),
+                              padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -196,33 +194,32 @@ class _HomeMobileState extends State<HomeMobile> {
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white),
                                   ),
-                                  Text('The 16th International Conference On',
+                                  FittedBox(
+                                    child: Text('The 16th International Conference On',
+                                        style: GoogleFonts.arimo(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white70)),
+                                  ),
+                                  FittedBox(
+                                    child: Text(
+                                      'Genetic and Evolutionary Computing',
                                       style: GoogleFonts.arimo(
                                           fontSize: 18,
                                           fontWeight: FontWeight.bold,
-                                          color: Colors.white70)),
-                                  Text(
-                                    'Genetic and Evolutionary Computing',
-                                    style: GoogleFonts.arimo(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white70),
+                                          color: Colors.white70),
+                                    ),
                                   ),
                                   const SizedBox(
                                     height: 10,
                                   ),
-                                  RichText(
-                                      text: TextSpan(
-                                          text: 'August 28-30, 2024, Miyazaki, Japan',
-                                          /* children: [
-                                        TextSpan(
-                                            text: ' (Hybrid)',
-                                            style: GoogleFonts.notoSans(
-                                                fontSize: 18,
-                                                color: Colors.blueAccent))
-                                      ],*/
-                                          style: GoogleFonts.notoSans(
-                                              fontSize: 14, color: Colors.white)))
+                                  FittedBox(
+                                    child: Text(
+                                      'August 28-30, 2024, Miyazaki, Japan',
+                                      style: GoogleFonts.notoSans(
+                                          fontSize: 14, color: Colors.white),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),

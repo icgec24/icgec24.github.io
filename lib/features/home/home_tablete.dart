@@ -129,13 +129,11 @@ class _HomeTabletState extends State<HomeTablet> {
                         ),
 
                         Positioned(
-                          top: 250,
-                          right: 50,
-                          left: 50,
                           child: Align(
                             alignment: Alignment.center,
                             child: Container(
                               color: Colors.black87,
+                              margin: const EdgeInsets.only(left: 30,right: 30),
                               padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -152,7 +150,7 @@ class _HomeTabletState extends State<HomeTablet> {
                                   FittedBox(
                                     child: Text('The 16th International Conference On',
                                         style: GoogleFonts.arimo(
-                                            fontSize: 35,
+                                            fontSize: 28,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white70)),
                                   ),
@@ -160,7 +158,7 @@ class _HomeTabletState extends State<HomeTablet> {
                                     child: Text(
                                       'Genetic and Evolutionary Computing',
                                       style: GoogleFonts.arimo(
-                                          fontSize: 35,
+                                          fontSize: 28,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white70),
                                     ),
