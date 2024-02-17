@@ -23,7 +23,7 @@ class NewsItem extends StatelessWidget {
             SizedBox(
                 width: 130,
                 child: Text(dateString,style: GoogleFonts.notoSans(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.grey)),),
-              Text(title,style: GoogleFonts.notoSans(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.black))
+              Expanded(child: Text(title,style: GoogleFonts.notoSans(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.black)))
             ],),
           ),
           Padding(

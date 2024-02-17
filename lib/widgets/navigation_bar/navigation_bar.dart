@@ -17,7 +17,7 @@ class NavigationBarWidget extends StatelessWidget {
         children:[
           Container( color:Colors.black54,
               padding: EdgeInsets.all(15),
-              child: _NavBarItem(title:'ICGEC-2024',textStyle: const TextStyle(fontSize: 20,color:Colors.white,fontWeight: FontWeight.bold),onTap: onTap,)),
+              child: NavBarItem(title:'ICGEC-2024',textStyle: const TextStyle(fontSize: 20,color:Colors.white,fontWeight: FontWeight.bold),onTap: onTap,)),
           Expanded(
             child: Scrollbar(
               controller: scrollController,
@@ -28,24 +28,24 @@ class NavigationBarWidget extends StatelessWidget {
                 controller:scrollController,
                 children: nav_title.map((e) =>Container(
                     padding: EdgeInsets.all(8),
-                    child: _NavBarItem(title: e,textStyle: GoogleFonts.ptSans(color: Colors.white70,fontSize: 17),onTap: onTap))).toList(),
+                    child: NavBarItem(title: e,textStyle: GoogleFonts.ptSans(color: Colors.white70,fontSize: 17),onTap: onTap))).toList(),
               ),
             ),
           ),
           Container( color:Colors.black54,
               padding: EdgeInsets.all(12),
-              child: _NavBarItem(title:'Contact us',textStyle: const TextStyle(fontSize: 18,color:Colors.grey,fontWeight: FontWeight.bold),onTap: onTap)),
+              child: NavBarItem(title:'Contact us',textStyle: const TextStyle(fontSize: 18,color:Colors.grey,fontWeight: FontWeight.bold),onTap: onTap)),
         ]
       ),
     );
   }
 }
 
-class _NavBarItem extends StatelessWidget {
+class NavBarItem extends StatelessWidget {
   final String title;
   final TextStyle textStyle;
   final Function(String) onTap;
-  const _NavBarItem({required this.title,required this.textStyle,required this.onTap});
+  const NavBarItem({super.key, required this.title,required this.textStyle,required this.onTap});
 
   @override
   Widget build(BuildContext context) {

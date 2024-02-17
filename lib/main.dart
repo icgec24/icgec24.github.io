@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:icgec_conference/features/home/home_mobile.dart';
+import 'package:icgec_conference/features/home/home_tablete.dart';
 
 import 'features/home/home_desktop.dart';
 import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
@@ -38,8 +40,21 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: HomeDesktop(),
-    );
+    final screenWidth = MediaQuery.of(context).size.width;
+    const breakpoint = 600.0;
+    if (screenWidth < breakpoint) {
+      return const Scaffold(
+        body: HomeMobile(),
+      );
+    }else if (screenWidth < 1200){
+      return const Scaffold(
+        body: HomeTablet(),
+      );
+    }
+    else{
+      return const Scaffold(
+        body: HomeDesktop(),
+      );
+    }
   }
 }
