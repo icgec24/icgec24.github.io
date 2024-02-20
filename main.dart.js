@@ -92247,10 +92247,10 @@ A.apU(B.j4,new A.auQ(this))},
 K(a){var s=null
 return A.hr(A.a([new A.bL(300,s,new A.oX(this.gvR(),s),s),new A.mU(new A.auN(this),s)],t.p),B.I,B.Z,B.S)},
 x7(a){var s,r,q,p,o,n=this,m=null
-switch(a){case"Call for Paper":return B.ja
-case"Access to Miyazaki":return B.j8
+switch(a){case"Call for Paper":return B.j7
+case"Access to Miyazaki":return B.j9
 case"Important Dates":return B.j6
-case"News":return B.j7
+case"News":return B.j8
 case"Galleries":return B.M
 case"Organizing Committee":return B.M
 case"Keynote Speech":return B.M
@@ -92261,7 +92261,7 @@ case"Final Manuscript":return B.M
 case"Conference Registration":return B.M
 case"Conference Program":return B.M
 case"Conference Venue":return B.M
-case"Recommended Accommodation":return B.j9}s=n.w
+case"Recommended Accommodation":return B.ja}s=n.w
 r=n.e
 r=A.bf(m,m,B.k,m,m,new A.co(m,A.v9(B.D,B.c1,new A.jb("assets/images/"+s[r.gl(r)],m,m),B.aP),m,m,m,m,m,B.aa),m,m,m,m)
 q=n.r
@@ -92308,10 +92308,10 @@ A.apU(B.j4,new A.auV(this))},
 K(a){var s=null
 return A.akS(A.aIJ(B.F,!0,B.jo,B.Bs),A.e3(A.a([new A.mU(new A.auR(this),s)],t.p),B.I,B.Z,B.S,s,B.a_),new A.mU(new A.auS(this),s),s)},
 x7(a){var s,r,q,p,o,n=this,m=null
-switch(a){case"Call for Paper":return B.ja
-case"Access to Miyazaki":return B.j8
+switch(a){case"Call for Paper":return B.j7
+case"Access to Miyazaki":return B.j9
 case"Important Dates":return B.j6
-case"News":return B.j7
+case"News":return B.j8
 case"Galleries":return B.M
 case"Organizing Committee":return B.M
 case"Keynote Speech":return B.M
@@ -92322,7 +92322,7 @@ case"Final Manuscript":return B.M
 case"Conference Registration":return B.M
 case"Conference Program":return B.M
 case"Conference Venue":return B.M
-case"Recommended Accommodation":return B.j9}s=n.w
+case"Recommended Accommodation":return B.ja}s=n.w
 r=n.e
 r=A.bf(m,m,B.k,m,m,new A.co(m,A.v9(B.D,B.c1,new A.jb("assets/images/"+s[r.gl(r)],m,m),B.aP),m,m,m,m,m,B.aa),m,m,m,m)
 q=n.r
@@ -92378,10 +92378,10 @@ A.apU(B.j4,new A.av_(this))},
 K(a){var s=null
 return A.akS(A.aIJ(B.F,!0,B.jo,B.Bs),A.e3(A.a([new A.mU(new A.auW(this),s)],t.p),B.I,B.Z,B.S,s,B.a_),new A.mU(new A.auX(this),s),s)},
 x7(a){var s,r,q,p,o,n=this,m=null
-switch(a){case"Call for Paper":return B.ja
-case"Access to Miyazaki":return B.j8
+switch(a){case"Call for Paper":return B.j7
+case"Access to Miyazaki":return B.j9
 case"Important Dates":return B.j6
-case"News":return B.j7
+case"News":return B.j8
 case"Galleries":return B.M
 case"Organizing Committee":return B.M
 case"Keynote Speech":return B.M
@@ -92392,7 +92392,7 @@ case"Final Manuscript":return B.M
 case"Conference Registration":return B.M
 case"Conference Program":return B.M
 case"Conference Venue":return B.M
-case"Recommended Accommodation":return B.j9}s=n.w
+case"Recommended Accommodation":return B.ja}s=n.w
 r=n.e
 r=A.bf(m,m,B.k,m,m,new A.co(m,A.v9(B.D,B.c1,new A.jb("assets/images/"+s[r.gl(r)],m,m),B.aP),m,m,m,m,m,B.aa),m,m,m,m)
 q=n.r
@@ -103234,16 +103234,16 @@ B.Ls=new A.aaP(null,null,B.NM,B.Gu)
 B.bQ=new A.OX(0,"tight")
 B.Mz=new A.PV(null)
 B.j6=new A.jY(1,B.bQ,B.Mz,null)
+B.a0j=new A.wx("CallforPaper.pdf",null)
+B.j7=new A.jY(1,B.bQ,B.a0j,null)
 B.a34=new A.bL(null,100,null,null)
 B.on=new A.jY(1,B.bQ,B.a34,null)
 B.VI=new A.Rb(null)
-B.j7=new A.jY(1,B.bQ,B.VI,null)
+B.j8=new A.jY(1,B.bQ,B.VI,null)
 B.a0i=new A.wx("AccessToMiyazaki.pdf",null)
-B.j8=new A.jY(1,B.bQ,B.a0i,null)
+B.j9=new A.jY(1,B.bQ,B.a0i,null)
 B.a1d=new A.SC(null)
-B.j9=new A.jY(1,B.bQ,B.a1d,null)
-B.a0j=new A.wx("CallForPaper.pdf",null)
-B.ja=new A.jY(1,B.bQ,B.a0j,null)
+B.ja=new A.jY(1,B.bQ,B.a1d,null)
 B.LI=new A.Pf(null)
 B.M=new A.jY(1,B.bQ,B.LI,null)
 B.Lt=new A.Bq(null,null,null,null,null,null,null,null,null,null,null)
