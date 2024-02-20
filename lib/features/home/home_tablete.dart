@@ -101,7 +101,7 @@ class _HomeTabletState extends State<HomeTablet> {
     switch(pageName)
     {
       case "Call for Paper":
-        return const Expanded(child: PdfViewDesktop(pdfFileName: "CallForPaper.pdf",));
+        return const Expanded(child: PdfViewDesktop(pdfFileName: "CallforPaper.pdf",));
       case "Access to Miyazaki":
         return const Expanded(child: PdfViewDesktop(pdfFileName: "AccessToMiyazaki.pdf",));
       case "Important Dates":
