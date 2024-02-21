@@ -5,7 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:get/state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icgec_conference/features/conference_news/news_desktop.dart';
+import 'package:icgec_conference/features/contact_us/contact_us_desktop.dart';
 import 'package:icgec_conference/features/importance_date/importance_date_desktop.dart';
+import 'package:icgec_conference/features/organizing_committee/organizing_committee_desktop.dart';
 import 'package:icgec_conference/features/recommended_accommodation/recommended_accommodation_desktop.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -87,7 +89,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
       case "Galleries":
         return const Expanded(child: GalleriesDesktop());
       case "Organizing Committee":
-        return const Expanded(child: GalleriesDesktop());
+        return const Expanded(child: OrganizingCommitteeDesktop());
       case "Keynote Speech":
         return const Expanded(child: GalleriesDesktop());
       case "Invited Sessions":
@@ -106,6 +108,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
         return const Expanded(child: GalleriesDesktop());
       case  "Recommended Accommodation":
         return const Expanded(child: RecommendedAccommodationDesktop());
+      case  "Contact us":
+        return const Expanded(child: ContactUsDesktop());
     }
     return  Expanded(
         child: Stack(

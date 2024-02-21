@@ -6,11 +6,13 @@ import 'package:get/state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icgec_conference/features/conference_news/news_desktop.dart';
 import 'package:icgec_conference/features/importance_date/importance_date_desktop.dart';
+import 'package:icgec_conference/features/organizing_committee/organizing_committee_desktop.dart';
 import 'package:icgec_conference/features/recommended_accommodation/recommended_accommodation_desktop.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/navigation_bar/navigation_bar.dart';
+import '../contact_us/contact_us_desktop.dart';
 import '../galleries/galleries_desktop.dart';
 import '../pdf_view/pdf_view_desktop.dart';
 import 'package:universal_html/html.dart' as html;
@@ -112,7 +114,7 @@ class _HomeMobileState extends State<HomeMobile> {
       case "Galleries":
         return const Expanded(child: GalleriesDesktop());
       case "Organizing Committee":
-        return const Expanded(child: GalleriesDesktop());
+        return const Expanded(child: OrganizingCommitteeDesktop());
       case "Keynote Speech":
         return const Expanded(child: GalleriesDesktop());
       case "Invited Sessions":
@@ -131,6 +133,8 @@ class _HomeMobileState extends State<HomeMobile> {
         return const Expanded(child: GalleriesDesktop());
       case  "Recommended Accommodation":
         return const Expanded(child: RecommendedAccommodationDesktop());
+      case  "Contact us":
+        return const Expanded(child: ContactUsDesktop());
     }
     return  Expanded(
         child: Stack(

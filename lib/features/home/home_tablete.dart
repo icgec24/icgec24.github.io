@@ -11,7 +11,9 @@ import 'package:pointer_interceptor/pointer_interceptor.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/navigation_bar/navigation_bar.dart';
+import '../contact_us/contact_us_desktop.dart';
 import '../galleries/galleries_desktop.dart';
+import '../organizing_committee/organizing_committee_desktop.dart';
 import '../pdf_view/pdf_view_desktop.dart';
 import 'package:universal_html/html.dart' as html;
 class HomeTablet extends StatefulWidget {
@@ -111,7 +113,7 @@ class _HomeTabletState extends State<HomeTablet> {
       case "Galleries":
         return const Expanded(child: GalleriesDesktop());
       case "Organizing Committee":
-        return const Expanded(child: GalleriesDesktop());
+        return const Expanded(child: OrganizingCommitteeDesktop());
       case "Keynote Speech":
         return const Expanded(child: GalleriesDesktop());
       case "Invited Sessions":
@@ -130,6 +132,8 @@ class _HomeTabletState extends State<HomeTablet> {
         return const Expanded(child: GalleriesDesktop());
       case  "Recommended Accommodation":
         return const Expanded(child: RecommendedAccommodationDesktop());
+      case  "Contact us":
+        return const Expanded(child: ContactUsDesktop());
     }
     return  Expanded(
         child: Stack(
