@@ -13,26 +13,34 @@ class PdfViewDesktop extends StatefulWidget {
 }
 
 class _PdfViewDesktopState extends State<PdfViewDesktop> {
-  final IFrameElement _iFrameElement = IFrameElement();
   @override
   void initState() {
     super.initState();
+    print("_iframeWidget is start?");
+
   }
 
   @override
+  void dispose() {
+    print("_iframeWidget is disposed?");
+    super.dispose();
+  }
+  @override
   Widget build(BuildContext context) {
+    final IFrameElement _iFrameElement = IFrameElement();
     _iFrameElement.style.height = '100%';
     _iFrameElement.style.width = '100%';
     _iFrameElement.src = 'https://icgec24.github.io/assets/assets/pdf/${widget.pdfFileName}';
     _iFrameElement.style.border = 'none';
+    var _frameUrl = widget.pdfFileName;
     print(widget.pdfFileName);
     ui.platformViewRegistry.registerViewFactory(
-      'iframeElement',
+      _frameUrl!,
           (int viewId) => _iFrameElement,
     );
-    final Widget _iframeWidget = HtmlElementView(
-      viewType: 'iframeElement',
-      key:Key(widget.pdfFileName??""),
+    final Widget iframeWidget = HtmlElementView(
+      viewType: _frameUrl,
+      key:UniqueKey(),
     );
     return Scaffold(
       body: ListView(
@@ -40,7 +48,7 @@ class _PdfViewDesktopState extends State<PdfViewDesktop> {
           SizedBox(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
-            child: _iframeWidget,
+            child: iframeWidget,
           ),
         ],
       ),
