@@ -31,9 +31,9 @@ class OrganizingCommitteeDesktop extends StatelessWidget {
               child:  Text('Advisory Committee Chairs',style: GoogleFonts.notoSans(fontSize: 25,color: Colors.white),),),
             HtmlWidget("""<ul>
             <li>Hiromitsu Hama, Osaka Metropolitan University, Japan</li>
-            <li>Peng Shi, University of Adelaide, Australia (Tentative)</li>
+            <li>Peng Shi, University of Adelaide, Australia</li>
             <li>Toshiaki Itami, Fukuyama University</li>
-            <li>Etsuo Chosa, University of Miyazaki (Tentative)</li>
+            <li>Etsuo Chosa, University of Miyazaki, Japan</li>
             <li>Pyke Tin, University of Miyazaki, Japan</li>
             </ul>""",textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
             Container(
@@ -63,10 +63,8 @@ class OrganizingCommitteeDesktop extends StatelessWidget {
             HtmlWidget("""<ul>
             <li>Chutima Tantikitti, Prince of Songkla University, Thailand</li>
             <li>Raja Sudhakaran, Vellore Institute of Technology, India</li>
-            <li>Tien-Wen Sung, Fujian University of Technology, China (Tentative)</li>
+            <li>Tien-Wen Sung, Fujian University of Technology, China</li>
             <li>Chih-Peng Fan, National Chung Hsing University, Taiwan (Tentative)</li>
-            <li>Takahiro Ogawa, Hokkaido University, Japan (Tentative)</li>
-            <li>Tetsuya Shimamura, Saitama University, Japan (Tentative)</li>
             </ul>""",textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
             Container(
               color: const Color(0xff053a40),
@@ -75,7 +73,7 @@ class OrganizingCommitteeDesktop extends StatelessWidget {
               child:  Text('Publication Chairs',style: GoogleFonts.notoSans(fontSize: 25,color: Colors.white),),),
             HtmlWidget("""<ul>
             <li>Thi Thi Zin, University of Miyazaki, Japan</li>
-            <li>Shu-Chuan Chu, Shandong University of Science and Technology, China (Tentative)</li>
+            <li>Shu-Chuan Chu, Shandong University of Science and Technology, China</li>
             </ul>""",textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
             Container(
               color: const Color(0xff195973),
