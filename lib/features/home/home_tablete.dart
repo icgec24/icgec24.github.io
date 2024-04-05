@@ -201,7 +201,7 @@ class _HomeTabletState extends State<HomeTablet> {
                       ),
                       RichText(
                           text: TextSpan(
-                              text: 'August 28-30, 2024, Miyazaki, Japan',
+                              text: 'August 28-29, 2024, Miyazaki, Japan',
                               /* children: [
                                       TextSpan(
                                           text: ' (Hybrid)',

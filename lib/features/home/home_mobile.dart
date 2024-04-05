@@ -201,7 +201,7 @@ class _HomeMobileState extends State<HomeMobile> {
                       ),
                       FittedBox(
                         child: Text(
-                          'August 28-30, 2024, Miyazaki, Japan',
+                          'August 28-29, 2024, Miyazaki, Japan',
                           style: GoogleFonts.notoSans(
                               fontSize: 14, color: Colors.white),
                         ),
