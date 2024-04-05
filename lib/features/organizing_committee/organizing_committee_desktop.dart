@@ -22,7 +22,7 @@ class OrganizingCommitteeDesktop extends StatelessWidget {
             child:  Text('Honorary Chairs',style: GoogleFonts.notoSans(fontSize: 25,color: Colors.white),),),
             HtmlWidget("""<ul>
             <li>Tsuyomu Ikenoue, University of Miyazaki, Japan</li>
-            <li>Jeng-Shyang Pan, Shandong University of Science and Technology, China</li>
+            <li>Jeng-Shyang Pan, Nanjing University of Information Science and Technology, China</li>
             </ul>""",textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
             Container(
               color: const Color(0xff053a40),
@@ -61,6 +61,8 @@ class OrganizingCommitteeDesktop extends StatelessWidget {
               margin: const EdgeInsets.symmetric(vertical: 10),
               child:  Text('Invited Session Chairs',style: GoogleFonts.notoSans(fontSize: 25,color: Colors.white),),),
             HtmlWidget("""<ul>
+            <li>Tetsuya Shimamura, Saitama University, Japan</li>
+            <li>Nobuo Funabiki, Okayama University, Japan</li>
             <li>Chutima Tantikitti, Prince of Songkla University, Thailand</li>
             <li>Raja Sudhakaran, Vellore Institute of Technology, India</li>
             <li>Tien-Wen Sung, Fujian University of Technology, China</li>
@@ -81,7 +83,8 @@ class OrganizingCommitteeDesktop extends StatelessWidget {
               margin: const EdgeInsets.symmetric(vertical: 10),
               child:  Text('Local Organizing Chairs',style: GoogleFonts.notoSans(fontSize: 25,color: Colors.white),),),
             HtmlWidget("""<ul>
-            <li>Hisaaki Yamaba, University of Miyazaki, Japan (Tentative)</li>
+            <li>Hisaaki Yamaba, University of Miyazaki, Japan</li>
+             <li>Cho Nilar Phyo, University of Miyazaki, Japan</li>
             </ul>""",textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
             const SizedBox(height: 30,)
         ],),
