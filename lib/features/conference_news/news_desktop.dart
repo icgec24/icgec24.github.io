@@ -12,6 +12,11 @@ class NewsDesktop extends StatelessWidget {
       children: [
         ScreenHeader(header: 'News'),
         NewsItem(
+          dateString: '[ 2024-04-05 ]',
+          title: 'Important Date Updated',
+          body: 'Important Date of conference updated.',
+        ),
+        NewsItem(
           dateString: '[ 2024-02-12 ]',
           title: 'Important Date Updated',
           body: 'Important Date of conference updated.',

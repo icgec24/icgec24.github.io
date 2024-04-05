@@ -28,7 +28,7 @@ class NavigationBarWidget extends StatelessWidget {
                 controller:scrollController,
                 children: nav_title.map((e) =>Container(
                     padding: EdgeInsets.all(8),
-                    child: NavBarItem(title: e,textStyle: GoogleFonts.ptSans(color: Colors.white70,fontSize: 17),onTap: onTap))).toList(),
+                    child: NavBarItem(title: e,showBadge: e=="News",textStyle: GoogleFonts.ptSans(color: Colors.white70,fontSize: 17),onTap: onTap))).toList(),
               ),
             ),
           ),
@@ -44,8 +44,9 @@ class NavigationBarWidget extends StatelessWidget {
 class NavBarItem extends StatelessWidget {
   final String title;
   final TextStyle textStyle;
+  final bool showBadge;
   final Function(String) onTap;
-  const NavBarItem({super.key, required this.title,required this.textStyle,required this.onTap});
+  const NavBarItem({super.key, required this.title,required this.textStyle,required this.onTap,this.showBadge=false});
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +54,11 @@ class NavBarItem extends StatelessWidget {
          onTap:(){
            onTap(title);
          },
-        child: Center(child: Text(title,style: textStyle,)));
+        child: Center(child: Badge(
+            isLabelVisible: showBadge,child: Padding(
+              padding: const EdgeInsets.only(top: 4.0,right: 8.0),
+              child: Text(title,style: textStyle,),
+            ))));
   }
 }
 
