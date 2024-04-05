@@ -8,6 +8,7 @@ import 'package:icgec_conference/features/conference_news/news_desktop.dart';
 import 'package:icgec_conference/features/contact_us/contact_us_desktop.dart';
 import 'package:icgec_conference/features/importance_date/importance_date_desktop.dart';
 import 'package:icgec_conference/features/organizing_committee/organizing_committee_desktop.dart';
+import 'package:icgec_conference/features/paper_submission/paper_submission_desktop.dart';
 import 'package:icgec_conference/features/recommended_accommodation/recommended_accommodation_desktop.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -95,7 +96,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
       case "Invited Sessions":
         return const Expanded(child: GalleriesDesktop());
       case "Paper Submission":
-        return const Expanded(child: GalleriesDesktop());
+        return const Expanded(child: PaperSubmissionDesktop());
       case "Accepted Paper":
         return const Expanded(child: GalleriesDesktop());
       case "Final Manuscript":
@@ -200,7 +201,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         mainAxisAlignment: MainAxisAlignment
                             .spaceEvenly,
                         children: [
-                          Expanded(
+                          const Expanded(
                             flex: 1,
                             child: SizedBox(
                               height: 100,
@@ -263,7 +264,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                               width: 250,
                             ),
                           ),
-                          Expanded(
+                          const Expanded(
                             flex: 1,
                             child: SizedBox(
                               height: 100,

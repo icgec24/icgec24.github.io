@@ -14,13 +14,13 @@ class ImportanceDateDesktop extends StatelessWidget {
         color: Colors.teal,
         padding: const EdgeInsets.symmetric(vertical: 3,horizontal: 10),
         child:  Text('Paper submission deadline',style: GoogleFonts.notoSans(fontSize: 25,color: Colors.white),),),
-      Text('April 30, 2024',style: GoogleFonts.notoSans(fontSize: 32),),
+      Text('May 8, 2024',style: GoogleFonts.notoSans(fontSize: 32),),
       const SizedBox(height: 16,),
       Container(
         padding: const EdgeInsets.symmetric(vertical: 3,horizontal: 10),
         color: Colors.brown,
         child:  Text('Invited session application deadline',style: GoogleFonts.notoSans(fontSize: 25,color: Colors.white),),),
-      Text('April 15, 2024',style: GoogleFonts.notoSans(fontSize: 32),),
+      Text('April 22, 2024',style: GoogleFonts.notoSans(fontSize: 32),),
       const SizedBox(height: 16,),
       Container(
         padding: const EdgeInsets.symmetric(vertical: 3,horizontal: 10),

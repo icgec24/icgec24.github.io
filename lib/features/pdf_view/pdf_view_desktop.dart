@@ -2,6 +2,7 @@ import 'dart:html';
 import 'dart:ui_web' as ui;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 //import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 //import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
@@ -62,7 +63,7 @@ class _PdfViewDesktopState extends State<PdfViewDesktop> {
     );}
     return Scaffold(
       backgroundColor: Colors.red,
-        body: SfPdfViewer.asset('assets/pdf/${widget.pdfFileName}',pageLayoutMode: PdfPageLayoutMode.single,initialZoomLevel: 1.0,)
+        body: SfPdfViewer.asset('assets/pdf/${widget.pdfFileName}',pageLayoutMode: PdfPageLayoutMode.single,initialZoomLevel: 1.0,scrollDirection:PdfScrollDirection.vertical)
     );
   }
 
