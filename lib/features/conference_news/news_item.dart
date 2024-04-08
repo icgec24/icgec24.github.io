@@ -12,6 +12,7 @@ class NewsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(top: 10,),
+      width: 1000,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -30,7 +31,10 @@ class NewsItem extends StatelessWidget {
             padding: const EdgeInsets.only(left: 50,top: 10,bottom: 10),
             child: Text(body,style: GoogleFonts.notoSans(fontSize: 16),),
           ),
-          const Divider(thickness: 1,color: Colors.grey,)
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Divider(thickness: 1,color: Colors.grey,),
+          )
         ],
       ),
     );

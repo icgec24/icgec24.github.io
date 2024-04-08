@@ -6,6 +6,7 @@ import 'package:get/state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icgec_conference/features/conference_news/news_desktop.dart';
 import 'package:icgec_conference/features/importance_date/importance_date_desktop.dart';
+import 'package:icgec_conference/features/invited_session/invited_session_desktop.dart';
 import 'package:icgec_conference/features/organizing_committee/organizing_committee_desktop.dart';
 import 'package:icgec_conference/features/recommended_accommodation/recommended_accommodation_desktop.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
@@ -119,7 +120,7 @@ class _HomeMobileState extends State<HomeMobile> {
       case "Keynote Speech":
         return const Expanded(child: GalleriesDesktop());
       case "Invited Sessions":
-        return const Expanded(child: GalleriesDesktop());
+        return const Expanded(child: InvitedSessionDesktop());
       case "Paper Submission":
         return const Expanded(child: PaperSubmissionDesktop());
       case "Accepted Paper":
