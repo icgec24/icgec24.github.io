@@ -8,9 +8,14 @@ class NewsDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         ScreenHeader(header: 'News'),
+        NewsItem(
+          dateString: '[ 2024-04-08 ]',
+          title: 'Invited Sessions Updated',
+          body: 'Invited Sessions of conference updated.',
+        ),
         NewsItem(
           dateString: '[ 2024-04-05 ]',
           title: 'Important Date Updated',

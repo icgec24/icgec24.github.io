@@ -62,11 +62,11 @@ class OrganizingCommitteeDesktop extends StatelessWidget {
               child:  Text('Invited Session Chairs',style: GoogleFonts.notoSans(fontSize: 25,color: Colors.white),),),
             HtmlWidget("""<ul>
             <li>Tetsuya Shimamura, Saitama University, Japan</li>
-            <li>Nobuo Funabiki, Okayama University, Japan</li>
+            <li>Mong-Fong Horng, National Kaohsiung University of Science and Technology, Taiwan</li>
             <li>Chutima Tantikitti, Prince of Songkla University, Thailand</li>
             <li>Raja Sudhakaran, Vellore Institute of Technology, India</li>
             <li>Tien-Wen Sung, Fujian University of Technology, China</li>
-            <li>Chih-Peng Fan, National Chung Hsing University, Taiwan (Tentative)</li>
+            <li>Chih-Peng Fan, National Chung Hsing University, Taiwan</li>
             </ul>""",textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
             Container(
               color: const Color(0xff053a40),

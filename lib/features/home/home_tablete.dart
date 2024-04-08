@@ -13,6 +13,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../widgets/navigation_bar/navigation_bar.dart';
 import '../contact_us/contact_us_desktop.dart';
 import '../galleries/galleries_desktop.dart';
+import '../invited_session/invited_session_desktop.dart';
 import '../organizing_committee/organizing_committee_desktop.dart';
 import '../paper_submission/paper_submission_desktop.dart';
 import '../pdf_view/pdf_view_desktop.dart';
@@ -118,7 +119,7 @@ class _HomeTabletState extends State<HomeTablet> {
       case "Keynote Speech":
         return const Expanded(child: GalleriesDesktop());
       case "Invited Sessions":
-        return const Expanded(child: GalleriesDesktop());
+        return const Expanded(child:  InvitedSessionDesktop());
       case "Paper Submission":
         return const Expanded(child: PaperSubmissionDesktop());
       case "Accepted Paper":
