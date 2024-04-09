@@ -53,7 +53,7 @@ class OrganizingCommitteeDesktop extends StatelessWidget {
             HtmlWidget("""<ul>
             <li>Thi Thi Zin, University of Miyazaki, Japan</li>
             <li>Chin-Shiuh Shieh, National Kaohsiung University of Science and Technology, Taiwan</li>
-            <li>Yu-Cheng Fan, National Taipei University of Technology, Taiwan (Tentative)</li>
+            <li>Yu-Cheng Fan, National Taipei University of Technology, Taiwan</li>
             </ul>""",textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
             Container(
               color: const Color(0xff195973),
