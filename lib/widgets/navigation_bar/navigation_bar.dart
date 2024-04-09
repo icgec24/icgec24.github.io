@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NavigationBarWidget extends StatelessWidget {
@@ -10,31 +11,43 @@ class NavigationBarWidget extends StatelessWidget {
     List<String> nav_title = ['News','Galleries','Organizing Committee','Keynote Speech','Call for Paper','Important Dates','Invited Sessions','Paper Submission',
     'Accepted Paper','Final Manuscript','Conference Registration','Conference Program','Conference Venue','Recommended Accommodation','Access to Miyazaki','Miyazaki Information'];
     final scrollController = ScrollController();
+    var selectTab = "".obs;
     return Container(
       color: Colors.blueGrey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children:[
           Container( color:Colors.black54,
-              padding: EdgeInsets.all(15),
-              child: NavBarItem(title:'ICGEC-2024',textStyle: const TextStyle(fontSize: 20,color:Colors.white,fontWeight: FontWeight.bold),onTap: onTap,)),
+              padding: const EdgeInsets.all(15),
+              child: NavBarItem(title:'ICGEC-2024',textStyle: const TextStyle(fontSize: 20,color:Colors.white,fontWeight: FontWeight.bold),onTap:  (String value){
+                onTap(value);
+                selectTab.value = value;
+              },)),
           Expanded(
             child: Scrollbar(
               controller: scrollController,
               scrollbarOrientation: ScrollbarOrientation.right,
               thumbVisibility: true,
               trackVisibility: true,
-              child: ListView(
-                controller:scrollController,
-                children: nav_title.map((e) =>Container(
-                    padding: EdgeInsets.all(8),
-                    child: NavBarItem(title: e,showBadge: e=="News",textStyle: GoogleFonts.ptSans(color: Colors.white70,fontSize: 17),onTap: onTap))).toList(),
+              child: Obx(
+                ()=> ListView(
+                  controller:scrollController,
+                  children: nav_title.map((e) =>Container(
+                      padding: const EdgeInsets.all(8),
+                      child: NavBarItem(title: e,showBadge: e=="News",textStyle: GoogleFonts.ptSans(color: selectTab.value == e? Colors.white: Colors.white70,fontSize: 17),onTap: (String value){
+                      onTap(value);
+                      selectTab.value = value;
+                      }))).toList(),
+                ),
               ),
             ),
           ),
           Container( color:Colors.black54,
-              padding: EdgeInsets.all(12),
-              child: NavBarItem(title:'Contact us',textStyle: const TextStyle(fontSize: 18,color:Colors.grey,fontWeight: FontWeight.bold),onTap: onTap)),
+              padding: const EdgeInsets.all(12),
+              child: NavBarItem(title:'Contact us',textStyle: const TextStyle(fontSize: 18,color:Colors.grey,fontWeight: FontWeight.bold),onTap:  (String value){
+                onTap(value);
+                selectTab.value = value;
+              })),
         ]
       ),
     );
