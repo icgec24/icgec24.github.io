@@ -29,7 +29,7 @@ class InvitedSessionDesktop extends StatelessWidget {
           invitationReceiveProfessor:
               "Prof. Thi Thi Zin and Prof. Hiromisu Hama"),
       InvitationLink(
-          invitationCode: "ICGEC-2024-SS02",
+          invitationCode: "ICGEC-2024-SS03",
           invitationTitle:
           "Special Session on “Circuit and Embedded System Design for Intelligent Computing and Signal Processing Technologies”",
           invitationLinkURL: "https://icgec24.github.io/assets/assets/pdf/ICGEC-2024-SS03-CFP.pdf",
