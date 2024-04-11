@@ -15,7 +15,7 @@ class ScreenHeader extends StatelessWidget {
             padding: const EdgeInsets.all(12.0),
             child: FittedBox(child: Text(header.toUpperCase(),style: GoogleFonts.notoSans(fontSize: 48,fontWeight: FontWeight.normal,color: Colors.black),)),
           ),
-          const Divider(thickness: 1,color: Colors.grey,)
+          const Divider(thickness: 1,height:0.5,color: Colors.grey,)
         ],
       ),
     );

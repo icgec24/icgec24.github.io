@@ -23,8 +23,8 @@ class NewsItem extends StatelessWidget {
               children: [
             SizedBox(
                 width: 130,
-                child: Text(dateString,style: GoogleFonts.notoSans(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.grey)),),
-              Expanded(child: Text(title,style: GoogleFonts.notoSans(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.black)))
+                child: Text(dateString,style: GoogleFonts.notoSans(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.grey)),),
+              Expanded(child: Text(title,style: GoogleFonts.notoSans(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.black)))
             ],),
           ),
           Padding(
@@ -33,7 +33,7 @@ class NewsItem extends StatelessWidget {
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Divider(thickness: 1,color: Colors.grey,),
+            child: Divider(height: 0.5,thickness: 0.5,color: Colors.grey,),
           )
         ],
       ),

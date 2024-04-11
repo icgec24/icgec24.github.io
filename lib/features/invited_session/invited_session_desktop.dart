@@ -27,7 +27,14 @@ class InvitedSessionDesktop extends StatelessWidget {
               "Special Session on Digital Transformation Technologies and Artificial Computing in Life Science: Exploring the Next Frontier",
           invitationLinkURL: "https://icgec24.github.io/assets/assets/pdf/ICGEC-2024-SS02-CFP.pdf",
           invitationReceiveProfessor:
-              "Prof. Thi Thi Zin and Prof. Hiromisu Hama")
+              "Prof. Thi Thi Zin and Prof. Hiromisu Hama"),
+      InvitationLink(
+          invitationCode: "ICGEC-2024-SS02",
+          invitationTitle:
+          "Special Session on “Circuit and Embedded System Design for Intelligent Computing and Signal Processing Technologies”",
+          invitationLinkURL: "https://icgec24.github.io/assets/assets/pdf/ICGEC-2024-SS03-CFP.pdf",
+          invitationReceiveProfessor:
+          "Prof. Chih-Peng Fan, Prof. Yu-Cheng Fan, and Associate Prof. Liang-Bi Chen")
     ];
     return SingleChildScrollView(
       child: SizedBox(
@@ -83,7 +90,7 @@ class InvitedSessionDesktop extends StatelessWidget {
                                       '''<p style="line-height: 2em;"> <em><a href="${item.invitationLinkURL}">${item.invitationTitle}</a></em>
                                                                  <br>${item.invitationReceiveProfessor}</p> 
                                                                                               ''',
-                                      textStyle: GoogleFonts.notoSans(
+                                      textStyle: GoogleFonts.aBeeZee(
                                           fontSize: 16, color: Colors.black)),
                                 )
                               ],
