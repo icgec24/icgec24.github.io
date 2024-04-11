@@ -7,35 +7,42 @@ class NewsDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        ScreenHeader(header: 'News'),
-        NewsItem(
-          dateString: '[ 2024-04-08 ]',
-          title: 'Invited Sessions Updated',
-          body: 'Invited Sessions of conference updated.',
-        ),
-        NewsItem(
-          dateString: '[ 2024-04-05 ]',
-          title: 'Important Date Updated',
-          body: 'Important Date of conference updated.',
-        ),
-        NewsItem(
-          dateString: '[ 2024-02-12 ]',
-          title: 'Important Date Updated',
-          body: 'Important Date of conference updated.',
-        ),
-        NewsItem(
-          dateString: '[ 2024-02-12 ]',
-          title: 'Recommended Accommodation Updated',
-          body: 'The recommendation of hotel for stay in Miyazaki, Japan.',
-        ),
-        NewsItem(
-          dateString: '[ 2024-02-8 ]',
-          title: 'Website Updated',
-          body: 'The website has been launched.',
+        const ScreenHeader(header: 'News'),
+        Expanded(
+          child: ListView(
+            children:const [
+              NewsItem(
+                dateString: '[ 2024-04-08 ]',
+                title: 'Invited Sessions Updated',
+                body: 'Invited Sessions of conference updated.',
+              ),
+              NewsItem(
+                dateString: '[ 2024-04-05 ]',
+                title: 'Important Date Updated',
+                body: 'Important Date of conference updated.',
+              ),
+              NewsItem(
+                dateString: '[ 2024-02-12 ]',
+                title: 'Important Date Updated',
+                body: 'Important Date of conference updated.',
+              ),
+              NewsItem(
+                dateString: '[ 2024-02-12 ]',
+                title: 'Recommended Accommodation Updated',
+                body: 'The recommendation of hotel for stay in Miyazaki, Japan.',
+              ),
+              NewsItem(
+                dateString: '[ 2024-02-8 ]',
+                title: 'Website Updated',
+                body: 'The website has been launched.',
+              )
+            ],
+          ),
         )
+
       ],
     );
   }
