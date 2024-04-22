@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:get/state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icgec_conference/features/conference_news/news_desktop.dart';
+import 'package:icgec_conference/features/conference_registration/conference_registration_desktop.dart';
 import 'package:icgec_conference/features/contact_us/contact_us_desktop.dart';
 import 'package:icgec_conference/features/importance_date/importance_date_desktop.dart';
 import 'package:icgec_conference/features/invited_session/invited_session_desktop.dart';
@@ -103,7 +104,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
       case "Final Manuscript":
         return const Expanded(child: GalleriesDesktop());
       case "Conference Registration":
-        return const Expanded(child: GalleriesDesktop());
+        return const Expanded(child: ConferenceRegistrationDesktop());
       case  "Conference Program":
         return const Expanded(child: GalleriesDesktop());
       case   "Conference Venue":

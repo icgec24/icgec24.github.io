@@ -11,6 +11,7 @@ import 'package:pointer_interceptor/pointer_interceptor.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/navigation_bar/navigation_bar.dart';
+import '../conference_registration/conference_registration_desktop.dart';
 import '../contact_us/contact_us_desktop.dart';
 import '../galleries/galleries_desktop.dart';
 import '../invited_session/invited_session_desktop.dart';
@@ -127,7 +128,7 @@ class _HomeTabletState extends State<HomeTablet> {
       case "Final Manuscript":
         return const Expanded(child: GalleriesDesktop());
       case "Conference Registration":
-        return const Expanded(child: GalleriesDesktop());
+        return const Expanded(child: ConferenceRegistrationDesktop());
       case  "Conference Program":
         return const Expanded(child: GalleriesDesktop());
       case   "Conference Venue":
