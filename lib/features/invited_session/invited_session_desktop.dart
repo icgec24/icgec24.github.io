@@ -1,6 +1,3 @@
-import 'dart:html';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -34,7 +31,14 @@ class InvitedSessionDesktop extends StatelessWidget {
           "Special Session on “Circuit and Embedded System Design for Intelligent Computing and Signal Processing Technologies”",
           invitationLinkURL: "https://icgec24.github.io/assets/assets/pdf/ICGEC-2024-SS03-CFP.pdf",
           invitationReceiveProfessor:
-          "Prof. Chih-Peng Fan, Prof. Yu-Cheng Fan, and Associate Prof. Liang-Bi Chen")
+          "Prof. Chih-Peng Fan, Prof. Yu-Cheng Fan, and Associate Prof. Liang-Bi Chen"),
+      InvitationLink(
+          invitationCode: "ICGEC-2024-SS04",
+          invitationTitle:
+          "Special Session on Advanced Meta-Heuristic Optimization Algorithms and Applications”",
+          invitationLinkURL: "https://icgec24.github.io/assets/assets/pdf/ICGEC-2024-SS04-CFP.pdf",
+          invitationReceiveProfessor:
+          "Prof. Shu-Chuan Chu, Dr. Pei Hu, Dr. Pei-Cheng Song, Prof. Jeng-Shyang Pan")
     ];
     return SingleChildScrollView(
       child: SizedBox(
