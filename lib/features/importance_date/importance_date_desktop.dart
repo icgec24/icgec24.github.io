@@ -33,6 +33,12 @@ class ImportanceDateDesktop extends StatelessWidget {
         color: Colors.brown,
         child:  Text('Camera-ready papers due',style: GoogleFonts.notoSans(fontSize: 25,color: Colors.white),),),
       Text('June 17, 2024',style: GoogleFonts.notoSans(fontSize: 32),),
+      const SizedBox(height: 16,),
+      Container(
+        padding: const EdgeInsets.symmetric(vertical: 3,horizontal: 10),
+        color: Colors.teal,
+        child:  Text('Early bird registration',style: GoogleFonts.notoSans(fontSize: 25,color: Colors.white),),),
+      Text('June 17, 2024',style: GoogleFonts.notoSans(fontSize: 32),),
 
     ],);
   }
