@@ -19,6 +19,8 @@ import '../organizing_committee/organizing_committee_desktop.dart';
 import '../paper_submission/paper_submission_desktop.dart';
 import '../pdf_view/pdf_view_desktop.dart';
 import 'package:universal_html/html.dart' as html;
+
+import '../visa_application/visa_application_desktop.dart';
 class HomeTablet extends StatefulWidget {
   const HomeTablet({super.key});
 
@@ -135,6 +137,8 @@ class _HomeTabletState extends State<HomeTablet> {
         return const Expanded(child: GalleriesDesktop());
       case  "Recommended Accommodation":
         return const Expanded(child: RecommendedAccommodationDesktop());
+      case  "Visa Application":
+        return const Expanded(child: VisaApplicationDesktop());
       case  "Contact us":
         return const Expanded(child: ContactUsDesktop());
     }

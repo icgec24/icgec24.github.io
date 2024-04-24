@@ -35,7 +35,7 @@ class InvitedSessionDesktop extends StatelessWidget {
       InvitationLink(
           invitationCode: "ICGEC-2024-SS04",
           invitationTitle:
-          "Special Session on Advanced Meta-Heuristic Optimization Algorithms and Applications”",
+          "Special Session on “Advanced Meta-Heuristic Optimization Algorithms and Applications”",
           invitationLinkURL: "https://icgec24.github.io/assets/assets/pdf/ICGEC-2024-SS04-CFP.pdf",
           invitationReceiveProfessor:
           "Prof. Shu-Chuan Chu, Dr. Pei Hu, Dr. Pei-Cheng Song, Prof. Jeng-Shyang Pan")

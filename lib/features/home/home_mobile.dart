@@ -20,6 +20,8 @@ import '../paper_submission/paper_submission_desktop.dart';
 import '../pdf_view/pdf_view_desktop.dart';
 import 'package:universal_html/html.dart' as html;
 
+import '../visa_application/visa_application_desktop.dart';
+
 class HomeMobile extends StatefulWidget {
   const HomeMobile({super.key});
 
@@ -136,6 +138,8 @@ class _HomeMobileState extends State<HomeMobile> {
         return const Expanded(child: GalleriesDesktop());
       case  "Recommended Accommodation":
         return const Expanded(child: RecommendedAccommodationDesktop());
+      case  "Visa Application":
+        return const Expanded(child: VisaApplicationDesktop());
       case  "Contact us":
         return const Expanded(child: ContactUsDesktop());
     }
