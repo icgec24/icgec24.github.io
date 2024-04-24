@@ -12,6 +12,7 @@ import 'package:icgec_conference/features/invited_session/invited_session_deskto
 import 'package:icgec_conference/features/organizing_committee/organizing_committee_desktop.dart';
 import 'package:icgec_conference/features/paper_submission/paper_submission_desktop.dart';
 import 'package:icgec_conference/features/recommended_accommodation/recommended_accommodation_desktop.dart';
+import 'package:icgec_conference/features/visa_application/visa_application_desktop.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/navigation_bar/navigation_bar.dart';
@@ -111,6 +112,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
         return const Expanded(child: GalleriesDesktop());
       case  "Recommended Accommodation":
         return const Expanded(child: RecommendedAccommodationDesktop());
+      case  "Visa Application":
+        return const Expanded(child: VisaApplicationDesktop());
       case  "Contact us":
         return const Expanded(child: ContactUsDesktop());
     }

@@ -9,7 +9,7 @@ class NavigationBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> nav_title = ['News','Galleries','Organizing Committee','Keynote Speech','Call for Paper','Important Dates','Invited Sessions','Paper Submission',
-    'Accepted Paper','Final Manuscript','Conference Registration','Conference Program','Conference Venue','Recommended Accommodation','Access to Miyazaki','Miyazaki Information'];
+    'Accepted Paper','Final Manuscript','Conference Registration','Conference Program','Conference Venue','Recommended Accommodation',"Visa Application",'Access to Miyazaki','Miyazaki Information'];
     final scrollController = ScrollController();
     var selectTab = "".obs;
     return Container(
