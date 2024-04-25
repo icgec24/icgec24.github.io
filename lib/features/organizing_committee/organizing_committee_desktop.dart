@@ -14,7 +14,7 @@ class OrganizingCommitteeDesktop extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          const ScreenHeader(header: "ORGANIZiNIG COMMITTEE"),
+          const ScreenHeader(header: "ORGANIZING COMMITTEE"),
           Container(
             color: const Color(0xff195973),
             padding: const EdgeInsets.symmetric(vertical: 3,horizontal: 10),
