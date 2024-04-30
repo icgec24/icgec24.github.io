@@ -21,6 +21,7 @@ class OrganizingCommitteeDesktop extends StatelessWidget {
             margin: const EdgeInsets.symmetric(vertical: 10),
             child:  Text('Honorary Chairs',style: GoogleFonts.notoSans(fontSize: 25,color: Colors.white),),),
             HtmlWidget("""<ul>
+            <li>Tatsuo Suganuma, University of Miyazaki, Japan</li>
             <li>Tsuyomu Ikenoue, University of Miyazaki, Japan</li>
             <li>Jeng-Shyang Pan, Nanjing University of Information Science and Technology, China</li>
             </ul>""",textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
