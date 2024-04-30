@@ -38,7 +38,14 @@ class InvitedSessionDesktop extends StatelessWidget {
           "Special Session on “Advanced Meta-Heuristic Optimization Algorithms and Applications”",
           invitationLinkURL: "https://icgec24.github.io/assets/assets/pdf/ICGEC-2024-SS04-CFP.pdf",
           invitationReceiveProfessor:
-          "Prof. Shu-Chuan Chu, Dr. Pei Hu, Dr. Pei-Cheng Song, Prof. Jeng-Shyang Pan")
+          "Prof. Shu-Chuan Chu, Dr. Pei Hu, Dr. Pei-Cheng Song, and Prof. Jeng-Shyang Pan"),
+      InvitationLink(
+          invitationCode: "ICGEC-2024-SS05",
+          invitationTitle:
+          "Special Session on “Multimedia Data Processing”",
+          invitationLinkURL: "https://icgec24.github.io/assets/assets/pdf/ICGEC-2024-SS05-CFP.pdf",
+          invitationReceiveProfessor:
+          "Prof. Tetsuya Shimamura and Dr. Yosuke Sugiura")
     ];
     return SingleChildScrollView(
       child: SizedBox(
