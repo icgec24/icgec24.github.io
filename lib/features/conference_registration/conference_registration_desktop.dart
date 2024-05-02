@@ -22,8 +22,11 @@ class ConferenceRegistrationDesktop extends StatelessWidget {
               const SizedBox(height: 16,),
               Text("We would like to express out appreciation and congratulations for the distinguished works you contributed to ICGEC-2024. Please follow the following instructions to accomplish the required procedures for conference registration.\n",style: GoogleFonts.notoSans(fontSize: 16,)),
               Text("All attendees for ICGEC-2024 are kindly requested to register. Related forms and supporting documents must be received with payment in JPY (Japanese Yen) no later than June 17, 2024. Please note that at least one author per paper must register. Otherwise the paper will not be included in the ICGEC-2024 technical program and proceedings.\n",style: GoogleFonts.notoSans(fontSize: 16,),textAlign: TextAlign.left,),
+              HtmlWidget('''<ul>
+            <li><a href='https://icgec24.github.io/assets/assets/pdf/ICGEC-2024-Registration_Form.doc'>ICGEC-2024 Registration Form </a></li>
+            </ul>''',textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                padding: const EdgeInsets.symmetric(vertical: 12.0),
                 child: Text("Registration Fee",style: GoogleFonts.notoSans(fontSize: 16,fontWeight: FontWeight.w600)),
               ),
               Image.asset("assets/images/conference_registration_fee.PNG"),
