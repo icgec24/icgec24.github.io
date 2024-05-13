@@ -22,7 +22,7 @@ class Assets {
   static const String imagesUdojingu03 = 'assets/images/udojingu_03.jpg';
   static const String imagesVelloreInstituteOfTechnologySeal2017 = 'assets/images/Vellore_Institute_of_Technology_seal_2017.png';
   static const String lottieAnimationComingSoon = 'assets/lottie_animation/coming_soon.gif';
-  static const String pdfAccessToMiyazaki = 'assets/pdf/AccessToMiyazaki.pdf';
+  static const String pdfAccesstoMiyazaki = 'assets/pdf/AccesstoMiyazaki.pdf';
   static const String pdfCallforPaper = 'assets/pdf/CallforPaper.pdf';
   static const String pdfICGEC2024ISCFPTemplate = 'assets/pdf/ICGEC-2024-IS-CFP-template.docx';
   static const String pdfICGEC2024RegistrationForm = 'assets/pdf/ICGEC-2024-Registration_Form.doc';
