@@ -85,7 +85,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
       case "Call for Paper":
         return const Expanded(child: PdfViewDesktop(pdfFileName: "CallforPaper.pdf",));
       case "Access to Miyazaki":
-        return const Expanded(child: PdfViewDesktop(pdfFileName: "AccessToMiyazaki.pdf",));
+        return const Expanded(child: PdfViewDesktop(pdfFileName: "AccesstoMiyazaki.pdf",));
       case "Important Dates":
         return const Expanded(child: ImportanceDateDesktop());
       case "News":
