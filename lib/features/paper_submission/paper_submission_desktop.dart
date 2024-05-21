@@ -21,7 +21,9 @@ class PaperSubmissionDesktop extends StatelessWidget {
             HtmlWidget('''<ul>
             <li>LaTeX: <a href='https://icgec24.github.io/assets/assets/datas/LaTex_Package.zip'>LaTex Package.zip</a></li>
             <li>Microsoft Word: <a href='https://icgec24.github.io/assets/assets/datas/Word_Template.zip'>Word_Template.zip</a> </li>
-            </ul>''',textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
+            </ul>
+            Please submit your manuscript via <a href='https://cmt3.research.microsoft.com/ICGEC2024'>https://cmt3.research.microsoft.com/ICGEC2024</a>
+            ''',textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
           ],),
       ),
 
