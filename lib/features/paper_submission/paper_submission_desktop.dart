@@ -11,7 +11,7 @@ class PaperSubmissionDesktop extends StatelessWidget {
     return Column(children: [
       const ScreenHeader(header: 'Paper Submission'),
       Container(
-        padding: EdgeInsets.only(left: 10,right: 10,top: 16),
+        padding: const EdgeInsets.only(left: 10,right: 10,top: 16),
         width: 1000,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -13,7 +13,7 @@ class ContactUsDesktop extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ScreenHeader(header: "Contact Us",),
+          const ScreenHeader(header: "Contact Us",),
         Container(
           color: const Color(0xff195973),
           padding: const EdgeInsets.symmetric(vertical: 3,horizontal: 10),

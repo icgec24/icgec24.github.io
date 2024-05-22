@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
 class WebViewExample extends StatefulWidget {
   final String web_url;
-  const WebViewExample({required this.web_url});
+  const WebViewExample({super.key, required this.web_url});
 
   @override
   WebViewExampleState createState() => WebViewExampleState();
