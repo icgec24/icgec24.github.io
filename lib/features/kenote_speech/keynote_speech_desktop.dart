@@ -6,7 +6,7 @@ class KeynoteSpeechDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         ScreenHeader(header: "Keynote Speech"),
         Text('Prof. Peng Shi: Cyber-physical systems: Analysis and Design')

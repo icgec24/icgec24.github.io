@@ -29,7 +29,6 @@ class _PdfViewDesktopState extends State<PdfViewDesktop> {
 
   @override
   void dispose() {
-    print("_iframeWidget is disposed?");
     super.dispose();
   }
   @override
