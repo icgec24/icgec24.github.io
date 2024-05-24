@@ -59,7 +59,14 @@ class InvitedSessionDesktop extends StatelessWidget {
           "Special Session on “Evolutionary Techniques in Cyber Threat Detection and Prevention”",
           invitationLinkURL: "https://icgec24.github.io/assets/assets/pdf/ICGEC-2024-SS07-CFP.pdf",
           invitationReceiveProfessor:
-          "Prof. Brij B. Gupta, Prof. Kwok Tai Chui, Prof. Vincent Shin-Hung Pan")
+          "Prof. Brij B. Gupta, Prof. Kwok Tai Chui, Prof. Vincent Shin-Hung Pan"),
+      InvitationLink(
+          invitationCode: "ICGEC-2024-SS08",
+          invitationTitle:
+          "Special Session on “Emerging Technologies for Infrastructure and Computing: Pioneering the Future”",
+          invitationLinkURL: "https://icgec24.github.io/assets/assets/pdf/ICGEC-2024-SS08-CFP.pdf",
+          invitationReceiveProfessor:
+          "Prof. Saw Sanda Aye")
     ];
     return SingleChildScrollView(
       child: Column(
