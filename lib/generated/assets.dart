@@ -33,6 +33,7 @@ class Assets {
   static const String pdfICGEC2024SS05CFP = 'assets/pdf/ICGEC-2024-SS05-CFP.pdf';
   static const String pdfICGEC2024SS06CFP = 'assets/pdf/ICGEC-2024-SS06-CFP.pdf';
   static const String pdfICGEC2024SS07CFP = 'assets/pdf/ICGEC-2024-SS07-CFP.pdf';
+  static const String pdfICGEC2024SS08CFP = 'assets/pdf/ICGEC-2024-SS08-CFP.pdf';
   static const String pdfICGEC2024SSCFPTemplate = 'assets/pdf/ICGEC-2024-SS-CFP-template.docx';
   static const String pdfVisaApplicationFormICGEC2024 = 'assets/pdf/Visa-application-form_ICGEC2024.docx';
 
