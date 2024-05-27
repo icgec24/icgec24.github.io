@@ -22,7 +22,8 @@ class PaperSubmissionDesktop extends StatelessWidget {
             <li>LaTeX: <a href='https://icgec24.github.io/assets/assets/datas/LaTex_Package.zip'>LaTex Package.zip</a></li>
             <li>Microsoft Word: <a href='https://icgec24.github.io/assets/assets/datas/Word_Template.zip'>Word_Template.zip</a> </li>
             </ul>
-            Please submit your manuscript via <a href='https://cmt3.research.microsoft.com/ICGEC2024'>https://cmt3.research.microsoft.com/ICGEC2024</a>
+            Please submit your manuscript via <a href='https://cmt3.research.microsoft.com/ICGEC2024'>https://cmt3.research.microsoft.com/ICGEC2024</a> <br/><br/>
+           <a href='https://icgec24.github.io/assets/assets/pdf/Paper-submission-guideline-for-ICGCE-2024.pdf'>Guidelines for paper submission can be downloaded here.</a>
             ''',textStyle: GoogleFonts.notoSans(fontSize: 16,color: Colors.black),),
           ],),
       ),
