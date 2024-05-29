@@ -6,13 +6,6 @@ class GalleriesDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Image.network("https://icgec24.github.io/assets/assets/lottie_animation/coming_soon.gif"),
-        Text('Coming Soon...',style: GoogleFonts.notoSans(fontSize: 50),),
-      ],
-    ));
+    return Center(child: Container(child: Text('Coming Soon...',style: GoogleFonts.notoSans(fontSize: 50),),));
   }
 }

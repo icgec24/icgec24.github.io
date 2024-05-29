@@ -7,17 +7,14 @@ class ScreenHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: FittedBox(child: Text(header.toUpperCase(),style: GoogleFonts.notoSans(fontSize: 48,fontWeight: FontWeight.normal,color: Colors.black),)),
-          ),
-          const Divider(thickness: 1,height:0.5,color: Colors.grey,)
-        ],
-      ),
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Text(header.toUpperCase(),style: GoogleFonts.notoSans(fontSize: 48,fontWeight: FontWeight.normal,color: Colors.black),),
+        ),
+        const Divider(thickness: 1,color: Colors.grey,)
+      ],
     );
   }
 }
