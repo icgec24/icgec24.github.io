@@ -15,6 +15,11 @@ class NewsDesktop extends StatelessWidget {
           child: ListView(
             children:const [
               NewsItem(
+                dateString: '[ 2024-05-29 ]',
+                title: 'Important Date Updated',
+                body: 'Important Date of conference updated.',
+              ),
+              NewsItem(
                 dateString: '[ 2024-04-22 ]',
                 title: 'Important Date Updated',
                 body: 'Important Date of conference updated.',
