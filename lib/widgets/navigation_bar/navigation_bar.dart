@@ -8,7 +8,7 @@ class NavigationBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<String> nav_title = ['News','Galleries','Organizing Committee','Keynote Speech','Call for Paper','Important Dates','Invited Sessions','Paper Submission',
+    List<String> navTitle = ['News','Galleries','Organizing Committee','Keynote Speech','Call for Paper','Important Dates','Invited Sessions','Paper Submission',
     'Accepted Paper','Final Manuscript','Conference Registration','Conference Program','Conference Venue','Recommended Accommodation',"Visa Application",'Access to Miyazaki','Miyazaki Information'];
     final scrollController = ScrollController();
     var selectTab = "".obs;
@@ -32,7 +32,7 @@ class NavigationBarWidget extends StatelessWidget {
               child: Obx(
                 ()=> ListView(
                   controller:scrollController,
-                  children: nav_title.map((e) =>Container(
+                  children: navTitle.map((e) =>Container(
                       padding: const EdgeInsets.all(8),
                       child: NavBarItem(title: e,showBadge: e=="News",textStyle: GoogleFonts.ptSans(color: selectTab.value == e? Colors.white: Colors.white70,fontSize: 17),onTap: (String value){
                       onTap(value);
